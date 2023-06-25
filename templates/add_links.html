@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Ajouter un lien</h1>
+
+    <form action="/add" method="post" class="askacss">
+        <div>
+            <label for="name">Nom du lien</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="link">Lien</label>
+            <input type="text" name="link" id="link">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+{% endblock %}

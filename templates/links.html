@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Page d'accueil</h1>
+
+    <article class="panel panel-primary" style="margin-top: 1%;">
+        <h2 class="title">Liste des liens</h2>
+
+        <div class="body">
+            {% if links %}
+                <ul style="margin-left: 2%;">
+                {% for link in links %}
+                    <li><a href="{{ link.href }}" target="_blank">{{ link.name }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                Aucuns liens pour l'instant
+            {% endif %}
+        </div>
+    </article>
+{% endblock %}
